@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.mainContainer {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1rem;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+nav {
+  display: flex;
+  align-items: center;
+  height: 3.3rem;
+  /* background-color: whitesmoke; */
+  /* border-bottom: 1px solid whitesmoke; */
+  color: whitesmoke;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+nav li {
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem;
+}
+li span {
+  padding: 0 0.2rem;
+  font-size: 1.8rem;
+  font-family: "Lobster", cursive;
+}
+li i {
+  font-size: 2.5rem;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 6rem;
+  width: 100vw;
+  /* background-color: whitesmoke; */
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  color: whitesmoke;
+  width: 70%;
+  height: 65vh;
+  margin: 1rem auto;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav,
+section,
+footer {
+  background-image: url("https://drive.google.com/thumbnail?id=1HQ9yco9FER-DaUzLQtQjA1SJ9yqh9KFe");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+body {
+  background-color: black;
+}
+/* Flip Css */
+.myLibrary,
+.likedSongs {
+  perspective: 1000px;
+}
+.myLibrary {
+  position: relative;
+  left: -17vw;
+}
+.likedSongs {
+  position: relative;
+  left: 17vw;
+}
+.front,
+.back {
+  height: 28vw;
+  width: 30vw;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  border-radius: 0.7rem;
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.front {
+  font-size: 7vw;
+  transition: 1s;
+}
+.back {
+  font-size: 5vw;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: 2s;
+  padding: 1vw;
+}
+.flip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+.myLibrary:hover .flip {
+  transform: rotateY(180deg);
+}
+.myLibrary:hover .front {
+  opacity: 0;
+}
+.myLibrary:hover .back {
+  opacity: 1;
+}
+.likedSongs:hover .flip {
+  transform: rotateY(180deg);
+}
+.likedSongs:hover .front {
+  opacity: 0;
+}
+.likedSongs:hover .back {
+  opacity: 1;
+}
+/* flip end */
+/* back card styling */
+ul {
+  list-style-type: none;
+}
+.song {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid whitesmoke;
+  width: 27vw;
+}
+.song img {
+  height: 3.5vw;
+}
+.song ul {
+  padding-left: 1vw;
+}
+.songName {
+  font-size: 1.6vw;
+}
+.artistName {
+  font-size: 1vw;
+  opacity: 75%;
+}
+.songInfo {
+  position: absolute;
+  left: 10vw;
+  /* display: flex; */
+}
+
+/* scroll bar */
+.mostly-customized-scrollbar {
+  display: block;
+  height: 23vw;
+  width: 29vw;
+  overflow: auto;
+  margin: 1vw;
+}
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  background-color: transparent; /* or add it to the track */
+}
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: whitesmoke;
+}

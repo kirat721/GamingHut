@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.buttonStart {
+  height: 100px;
+  width: 100px;
+  color: snow;
+  font-size: 60px;
+  left: 38vw;
+  top: 40vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+.gameContainer {
+  width: 100%;
+  height: 100vh;
+  background: url(https://docs.google.com/uc?id=1I4BSt9fxkMk6Fqrf_yLPKzup9WX1S8ld);
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  background-color: blue;
+}
+.blur {
+  filter: blur(3px);
+}
+.welcome {
+  font-size: 100px;
+  color: snow;
+  position: absolute;
+  left: 32vw;
+  top: 20vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+.gameOver {
+  font-size: 100px;
+  color: snow;
+  position: absolute;
+  left: 28vw;
+  top: 20vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+  opacity: 0%;
+}
+.button {
+  color: snow;
+  position: absolute;
+  font-size: 45px;
+  left: 41vw;
+  top: 44vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background: none;
+  border: 2px solid snow;
+  border-radius: 1em;
+  padding: 0 1em;
+}
+.button2 {
+  color: snow;
+  position: absolute;
+  font-size: 45px;
+  left: 30vw;
+  top: 60vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+  background: none;
+  border: 2px solid snow;
+  border-radius: 1em;
+  padding: 0 1em;
+  opacity: 0%;
+}
+.gameEnd {
+  font-size: 60px;
+  color: snow;
+  position: absolute;
+  text-align: center;
+  left: 20vw;
+  top: 80vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+  opacity: 0%;
+}
+#yourScore {
+  font-size: large;
+  color: snow;
+  position: absolute;
+  left: 90vw;
+  top: 5vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+#yourLevel {
+  font-size:xx-large;
+  color: snow;
+  position: absolute;
+  left: 45vw;
+  top: 10vh;
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+.player {
+  background: url(https://docs.google.com/uc?id=1zlyl2v7uTWpVjIu9zuJ7p3AndJx7ZhiX);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  bottom: 10px;
+  left: 150px;
+}
+.obstacle {
+  background-image: url(https://docs.google.com/uc?id=1rpkLdxO_zYkzaR_ZcUZlfFmwxJV0O3QA);
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  bottom: 0px;
+  left: 100vw;
+}
+.obstacle#ob2 {
+  background-image: url(https://docs.google.com/uc?id=1e-L-HmfD2gGo9zoYaw-xC-dv56KozKYL);
+  left: 200vw;
+}
+.obstacle#ob3 {
+  background-image: url(https://docs.google.com/uc?id=1RNNGNTZ8wr5X0VkKMjrMGOMExhvnt1rd);
+  left: 150vw;
+}
+.animatePlayer {
+  animation: playerAnimation 0.8s linear;
+}
+.animateObstacle1 {
+  animation: obstacleAnimation 5s linear infinite;
+}
+.animateObstacle2 {
+  animation: obstacleAnimation 13s linear infinite;
+}
+.animateObstacle3 {
+  animation: obstacleAnimation 8s linear infinite;
+}
+.animateScore {
+  animation: scoreAnimation 1s linear;
+  animation-fill-mode: forwards;
+}
+.animateGameOver {
+  animation: gameOverAnimation 1s linear;
+  animation-fill-mode: forwards;
+}
+.animateWelcome {
+  animation: welcomeAnimation 1s linear;
+  animation-fill-mode: forwards;
+}
+.animateButton {
+  animation: buttonAnimation 1s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes playerAnimation {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 250px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+@keyframes obstacleAnimation {
+  100% {
+    left: -10vw;
+  }
+}
+@keyframes scoreAnimation {
+  100% {
+    font-size: 60px;
+    left: 38vw;
+    top: 40vh;
+  }
+}
+@keyframes gameOverAnimation {
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes welcomeAnimation {
+  100% {
+    top: -30vh;
+    opacity: 0%;
+  }
+}
+@keyframes buttonAnimation {
+  100% {
+    opacity: 0%;
+  }
+}
